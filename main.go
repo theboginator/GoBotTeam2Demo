@@ -37,7 +37,11 @@ func robotRunLoop(lightSensor *aio.GroveLightSensorDriver, soundSensor *aio.Grov
 				gpg.SetLED(1, 200, 200, 200)
 				ledOn = !ledOn
 			}
+			gpg.SetMotorDps(g.MOTOR_LEFT, 0) //Stop motor while value is low
+		} else if sensorVal > 2500 {
+			gpg.SetMotorDps(g.MOTOR_LEFT, 20) //Start motor while value is high
 		}
+		gpg.Start()
 
 		//gpg.SetMotorDps(g  20)
 		//gpg.Start()
