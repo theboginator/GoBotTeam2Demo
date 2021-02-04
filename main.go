@@ -45,6 +45,7 @@ func robotRunLoop(lightSensor *aio.GroveLightSensorDriver, soundSensor *aio.Grov
 
 		//gpg.SetMotorDps(g  20)
 		//gpg.Start()
+		// test
 	}
 }
 
